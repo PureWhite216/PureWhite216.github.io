@@ -13,10 +13,10 @@
         
         <guid>https://PureWhite216.github.io/about/</guid>
         <description>&lt;h2 id=&#34;info&#34;&gt;Info&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; 20
-&lt;strong&gt;School:&lt;/strong&gt; Beihang University(BUAA)
-&lt;strong&gt;Major:&lt;/strong&gt; Software Engineering
-&lt;strong&gt;Interests:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; 20&lt;br&gt;
+&lt;strong&gt;School:&lt;/strong&gt; Beihang University(BUAA)&lt;br&gt;
+&lt;strong&gt;Major:&lt;/strong&gt; Software Engineering&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interests:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Video Game(Both Play and Develop)&lt;/li&gt;
 &lt;li&gt;Music&lt;/li&gt;
@@ -26,8 +26,8 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Currently Doing:&lt;/strong&gt; Studying Unreal Engine, NPR, Animtation, Trying to make some artworks.&lt;/p&gt;
 &lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;mailto:805290715@qq.com&#34; &gt;805290715@qq.com&lt;/a&gt;
-&lt;strong&gt;Wechat:&lt;/strong&gt; buaa_qjq&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;code&gt;805290715@qq.com&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Wechat:&lt;/strong&gt; &lt;code&gt;buaa_qjq&lt;/code&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
