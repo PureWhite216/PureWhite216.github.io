@@ -676,12 +676,12 @@ $$&lt;/p&gt;
 &lt;h5 id=&#34;perspective-and-orthographic&#34;&gt;Perspective and Orthographic&lt;/h5&gt;</description>
         </item>
         <item>
-        <title>UE Framework-How to start the game</title>
-        <link>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</link>
+        <title>UE Framework-From int main() to BeginPlay()</title>
+        <link>https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/Image.jpg" alt="Featured image of post UE Framework-From int main() to BeginPlay()" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
 &lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -696,11 +696,9 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 游戏循环的大致过程
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g_exit_requested&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -714,7 +712,7 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;launch&#34;&gt;Launch&lt;/h2&gt;
-&lt;p&gt;游戏通过各个平台的launch文件启动。&lt;/p&gt;
+&lt;p&gt;The game launches via the launch file of the specific platform.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -747,7 +745,7 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 简化后的launch.cpp
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Simplified launch.cpp
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;#34;LaunchEngineLoop.h&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FEngineLoop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -756,7 +754,7 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;int32&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;GuardedMain&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TCHAR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CmdLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Run early Initialization, load engine modules
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;int32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PreInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CmdLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// PreInit加载了大多数模块
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;int32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PreInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CmdLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Most modules are loaded in PreInit
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GisRequestingExit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -777,20 +775,23 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;GEngineLoop.PreInit（）&lt;/h2&gt;
-&lt;p&gt;引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
-&lt;img src=&#34;https://PureWhite216.github.io/Photos/1.JPG&#34;
-	
-	
-	
+&lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;`GEngineLoop.PreInit()&lt;/h2&gt;
+&lt;p&gt;The source code is divided into modules.&lt;br&gt;
+A module system helps ensure that dependencies between different parts of the source code are manageable and that only the required modules are loaded.
+&lt;img src=&#34;https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/1.JPG&#34;
+	width=&#34;1741&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/1_huaf34fbf3356fec395b028e0610cff063_235587_480x0_resize_q75_box.JPG 480w, https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/1_huaf34fbf3356fec395b028e0610cff063_235587_1024x0_resize_q75_box.JPG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;G1&#34;
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
 	
-&gt;
-在Game Loop的&lt;code&gt;PreInit&lt;/code&gt;阶段会先加载一些低级模块，为后续的初始化做准备，如定义基本类型。&lt;/p&gt;
-&lt;h3 id=&#34;加载顺序&#34;&gt;加载顺序：&lt;/h3&gt;
+&gt;&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;PreInit&lt;/code&gt; of the game loop, some basic modules are loaded in preparation for subsequent initialization, such as defining primitive types.&lt;/p&gt;
+&lt;h3 id=&#34;load-sequence&#34;&gt;Load Sequence：&lt;/h3&gt;
 &lt;h4 id=&#34;1-loadcoremodules&#34;&gt;1. LoadCoreModules&lt;/h4&gt;
 &lt;p&gt;CoreUObject&lt;/p&gt;
 &lt;h4 id=&#34;2-loadpreinitmodules&#34;&gt;2. LoadPreInitModules&lt;/h4&gt;
@@ -815,12 +816,14 @@ PacketHandler
 &amp;hellip;&lt;/p&gt;
 &lt;h4 id=&#34;5-project--plugin-default-point&#34;&gt;5. Project &amp;amp; Plugin (Default Point)&lt;/h4&gt;
 &lt;p&gt;GamePlay Codes&lt;/p&gt;
-&lt;h3 id=&#34;模块加载流程&#34;&gt;模块加载流程&lt;/h3&gt;
-&lt;p&gt;1.首先，引擎注册该模块中定义的所有&lt;code&gt;UObject&lt;/code&gt;类，从而被反射系统获知，并且为每个类构造一个CDO(Class Default Object)。CDO是对类的默认状态的记录，并且充当之后的继承的原型。引擎循环分配CDO，运行其构造函数，并传递父类的CDO作为模板。因此构造函数中不应该包含Gameplay代码。
-2.第二，引擎调用了模块的&lt;code&gt;StartupModule&lt;/code&gt;函数，其与&lt;code&gt;ShutdownModule&lt;/code&gt;相对应，从而在模块的生命周期中执行所需的初始化。&lt;/p&gt;
-&lt;p&gt;综上，&lt;code&gt;GEngineLoop.PreInit()&lt;/code&gt;加载了后续初始化所需的底层系统、引擎块、工程以及插件模块。&lt;/p&gt;
+&lt;h3 id=&#34;module-loading-process&#34;&gt;Module Loading Process&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;First, the engine registers all the &lt;code&gt;UObject&lt;/code&gt; classes defined in the module, which are known by the reflection system, and constructs a &lt;code&gt;Class Default Object&lt;/code&gt; (CDO) for each Class. The CDO is a record of the default state of the class and serves as a prototype for subsequent inheritance. The engine circulates the CDO, runs its constructor, and passes the parent class&amp;rsquo;s CDO as a template. Therefore there should be no Gameplay code in the constructor.&lt;/li&gt;
+&lt;li&gt;Second, the engine calls module&amp;rsquo;s &lt;code&gt;StartupModule&lt;/code&gt; function, which corresponds to &lt;code&gt;ShutdownModule&lt;/code&gt; to perform the required initialization during module&amp;rsquo;s lifetime.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To sum up, &lt;code&gt;GEngineLoop.PreInit()&lt;/code&gt; loads the basic system, engine blocks, gameplay code, and plug-in modules, all of which are required for subsequent initialization.&lt;/p&gt;
 &lt;h2 id=&#34;gengineloopinit&#34;&gt;GEngineLoop.Init()&lt;/h2&gt;
-&lt;h3 id=&#34;创建ugameengine实例&#34;&gt;创建UGameEngine实例&lt;/h3&gt;
+&lt;h3 id=&#34;create-instance-of-ugameengine&#34;&gt;Create Instance of UGameEngine&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -829,10 +832,9 @@ PacketHandler
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GEngine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UEngine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetTransientPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EngineClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;UEngine&lt;/code&gt;派生出&lt;code&gt;UEditorEngine&lt;/code&gt;与&lt;code&gt;UGameEngine&lt;/code&gt;。
-引擎首先检查配置文件来决定使用哪个类，然后创建该类的一个实例&lt;code&gt;GEngine&lt;/code&gt;，并将其作为全局的UGameEngine实例。
-&lt;code&gt;GEngine&lt;/code&gt;在Engine/Engine.h声明。&lt;/p&gt;
-&lt;h3 id=&#34;初始化gengine&#34;&gt;初始化GEngine&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;The engine firstly checks the configuration to decide use which class, then creates the instance &lt;code&gt;GEngine&lt;/code&gt; of the class as global &lt;code&gt;UGameEngine&lt;/code&gt; instance.&lt;br&gt;
+&lt;code&gt;GEngine&lt;/code&gt; is declared in &lt;code&gt;Engine/Engine.h&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;initialize-gengine&#34;&gt;Initialize GEngine&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -847,8 +849,8 @@ PacketHandler
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FCoreDelegates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OnPostEngineInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Broadcas&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;初始化后引擎会触发一个全局委托&lt;code&gt;OnPostEngineInit&lt;/code&gt;来指示引擎现已初始化。&lt;/p&gt;
-&lt;h3 id=&#34;初始化所有后加载的模块&#34;&gt;初始化所有后加载的模块&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;When &lt;code&gt;GEngine&lt;/code&gt; is initialized, a global delegate is fired to indicate that the Engine is now initialized.&lt;/p&gt;
+&lt;h3 id=&#34;initialize-any-late-loaded-modules&#34;&gt;Initialize any late-loaded modules&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -861,11 +863,12 @@ PacketHandler
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;IPluginManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadMoudlesForEnabledPlugings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EloadingPhase&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostEngineInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;至此，引擎启动，前期初始化完成。&lt;/p&gt;
-&lt;h3 id=&#34;进入map&#34;&gt;进入Map&lt;/h3&gt;
-&lt;p&gt;UEngine类能够使玩家在引擎启动后进入地图中。
-引擎能够浏览到一个URL， 其表示要作为客户端连接的服务器地址（本地为127.0.0.1），也可以表示要在本地加载的地图的名称。&lt;/p&gt;
-&lt;h2 id=&#34;引擎启动后的初始化&#34;&gt;引擎启动后的初始化&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;The engine loads any project or plugin modules that have been configured for late loading.&lt;/p&gt;
+&lt;p&gt;Now, the engine is started and initialization is complete.&lt;/p&gt;
+&lt;h3 id=&#34;load-map&#34;&gt;Load Map&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;UEngine&lt;/code&gt; class enables user to load into a map and start playing.&lt;br&gt;
+The Engine is able to browse to an URL, which can represent either a server address to connect to as a client, or the name of a map to load up locally.&lt;/p&gt;
+&lt;h2 id=&#34;engine-initialization&#34;&gt;Engine Initialization&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -893,6 +896,11 @@ PacketHandler
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// In GameEngine.cpp； UGameEngine::Init()
@@ -901,7 +909,10 @@ PacketHandler
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetGameUserSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GetGameUserSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ApplyNonResolutionSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create UGameInstance, UGameViewportClient and ULocalPlayer 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create an UGameInstance using the class specified by project config
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// After UE4.4, UGameInstance was spun off from the UGameEngine class to handle some of the more project-specific functionality.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FSoftClassPath&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClassName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GetDefault&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameMapsSettings&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;UClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullptr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstanceClassName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ToString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -910,6 +921,7 @@ PacketHandler
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InitializeStandalone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create an UGameViewportClient and initialize it
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// UGameViewportClient is essentially a high-level interface for the rendering, audio, and input systems, which is between UEngine and ULocalPlayer.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportCLient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameViewportClientClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetWorldContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameViewport&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -917,15 +929,25 @@ PacketHandler
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CreateGameViewport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create a ULocalPlayer and associate it with the view client
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// ULocalPlayer represents the user who is sitting in front of the screen
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FString&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SetupInitalLocalPlayer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OnviewportCreated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Broadcast&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;加载地图前,引擎通过创建&lt;code&gt;UGameInstance&lt;/code&gt;, &lt;code&gt;UGameViewportClient&lt;/code&gt;和&lt;code&gt;ULocalPlayer&lt;/code&gt;来进行初始化
-&lt;code&gt;ULocalPlayer&lt;/code&gt;可以被视为代表屏幕前的用户。
-&lt;code&gt;UGameViewportClient&lt;/code&gt;本质上是渲染、音频和输入系统的高级接口，即用户和引擎之间的接口。
-&lt;code&gt;UGameInstance&lt;/code&gt;处理一些特定于项目的功能，GameEngine中只能创建唯一一个。&lt;/p&gt;</description>
+&lt;/div&gt;&lt;p&gt;Now, we have an &lt;code&gt;UGameEngine&lt;/code&gt;, an &lt;code&gt;UGameInstance&lt;/code&gt;, an &lt;code&gt;UGameViewportClient&lt;/code&gt; and an &lt;code&gt;ULocalPlayer&lt;/code&gt;. The game is ready to start.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/2.JPG&#34;
+	width=&#34;1737&#34;
+	height=&#34;957&#34;
+	srcset=&#34;https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/2_huaf34fbf3356fec395b028e0610cff063_142680_480x0_resize_q75_box.JPG 480w, https://PureWhite216.github.io/p/ue-framework-from-int-main-to-beginplay/2_huaf34fbf3356fec395b028e0610cff063_142680_1024x0_resize_q75_box.JPG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;</description>
         </item>
         <item>
         <title>Noctambulism</title>
