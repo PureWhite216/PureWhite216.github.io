@@ -359,9 +359,11 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// A simplified Game Loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">init</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">g_exit_requested</span><span class="p">)</span>
@@ -661,7 +663,7 @@ By the end of <code>LoadMap</code>, we will have <code>UWorld</code> that contai
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Clean up the world, destroy all actors
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Cache the current time so we can report total duration post-load
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">double</span> <span class="n">StartTime</span> <span class="o">=</span>  <span class="n">FPlatformTime</span><span class="o">::</span><span class="n">Seconds</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">double</span> <span class="n">StartTime</span> <span class="o">=</span> <span class="n">FPlatformTime</span><span class="o">::</span><span class="n">Seconds</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// Notify the GameInstance of the map change in case it wants to load assets
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WorldContext</span><span class="p">.</span><span class="n">OwningGameInstance</span><span class="o">-&gt;</span><span class="n">PreloadContentForURL</span><span class="p">(</span><span class="n">URL</span><span class="p">);</span>
